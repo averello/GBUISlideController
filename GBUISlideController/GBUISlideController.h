@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 George Boumis <developer.george.boumis@gmail.com>. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "GBUIControlViewController/GBUIControlViewController.h"
 
-@interface GBUISlideController : NSObject
-
+@interface GBUISlideController : GBUIControlViewController
+@property (nonatomic, strong, readonly) UIView *controlView;
+@property (nonatomic, strong, readonly) UIView *contentView;
 @end
