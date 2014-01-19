@@ -321,7 +321,7 @@
 	[self addChildViewController:destinationViewController];
 	destinationViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
 	
-	[self transitionFromViewController:sourceViewController toViewController:destinationViewController duration:_options.transitionDuration options:(_options.transitionAnimationOptions) animations:^{.
+	[self transitionFromViewController:sourceViewController toViewController:destinationViewController duration:_options.transitionDuration options:(_options.transitionAnimationOptions) animations:^{
 		[self.contentView addConstraints:self.selectedViewControllerConstraints];
 		[self.contentView bringSubviewToFront:destinationViewController.view];
 	} completion:^(BOOL finished) {

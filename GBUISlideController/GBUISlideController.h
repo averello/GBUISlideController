@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GBUIControlViewController/GBUIControlViewController.h"
+#import "GBUIPagedSliderControl.h"
 
 typedef NS_ENUM(NSUInteger, GBUISlideControllerTransitionDirection) {
 	GBUISlideControllerTransitionDirectionTop,
