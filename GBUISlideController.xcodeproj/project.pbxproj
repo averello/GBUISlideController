@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1E6F45188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1E6F44188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m */; };
+		DE560C54185F434A00667498 /* libGBUIControlViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EED3185F428C004F8CA5 /* libGBUIControlViewController.a */; };
 		DE83EE73185F3AE5004F8CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE72185F3AE5004F8CA5 /* Foundation.framework */; };
 		DE83EE78185F3AE5004F8CA5 /* GBUISlideController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE83EE77185F3AE5004F8CA5 /* GBUISlideController.h */; };
 		DE83EE7A185F3AE5004F8CA5 /* GBUISlideController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83EE79185F3AE5004F8CA5 /* GBUISlideController.m */; };
@@ -16,10 +18,60 @@
 		DE83EE87185F3AE5004F8CA5 /* libGBUISlideController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */; };
 		DE83EE8D185F3AE5004F8CA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE83EE8B185F3AE5004F8CA5 /* InfoPlist.strings */; };
 		DE83EE8F185F3AE5004F8CA5 /* GBUISlideControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83EE8E185F3AE5004F8CA5 /* GBUISlideControllerTests.m */; };
+		DE83EE9A185F3C0B004F8CA5 /* GBUIPagedSliderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DE83EE99185F3C0B004F8CA5 /* GBUIPagedSliderControl.m */; };
+		DE96615D185FABF800A69341 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE72185F3AE5004F8CA5 /* Foundation.framework */; };
+		DE96615F185FABF800A69341 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE96615E185FABF800A69341 /* CoreGraphics.framework */; };
+		DE966160185FABF800A69341 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE83185F3AE5004F8CA5 /* UIKit.framework */; };
+		DE966166185FABF800A69341 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE966164185FABF800A69341 /* InfoPlist.strings */; };
+		DE966168185FABF800A69341 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966167185FABF800A69341 /* main.m */; };
+		DE96616C185FABF800A69341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE96616B185FABF800A69341 /* AppDelegate.m */; };
+		DE966175185FABF800A69341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966174185FABF800A69341 /* ViewController.m */; };
+		DE966177185FABF800A69341 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE966176185FABF800A69341 /* Images.xcassets */; };
+		DE96617D185FABF800A69341 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE80185F3AE5004F8CA5 /* XCTest.framework */; };
+		DE96617E185FABF800A69341 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE72185F3AE5004F8CA5 /* Foundation.framework */; };
+		DE96617F185FABF800A69341 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE83185F3AE5004F8CA5 /* UIKit.framework */; };
+		DE966187185FABF800A69341 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE966185185FABF800A69341 /* InfoPlist.strings */; };
+		DE966189185FABF800A69341 /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966188185FABF800A69341 /* TestTests.m */; };
+		DE966193185FAC1500A69341 /* libGBUISlideController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DE560C52185F434500667498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE83EEA3185F3C9F004F8CA5;
+			remoteInfo = GBUIControlViewController;
+		};
 		DE83EE85185F3AE5004F8CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE83EE67185F3AE5004F8CA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE83EE6E185F3AE5004F8CA5;
+			remoteInfo = GBUISlideController;
+		};
+		DE83EED2185F428C004F8CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE83EEA4185F3C9F004F8CA5;
+			remoteInfo = GBUIControlViewController;
+		};
+		DE83EED4185F428C004F8CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE83EEB4185F3C9F004F8CA5;
+			remoteInfo = GBUIControlViewControllerTests;
+		};
+		DE966180185FABF800A69341 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE83EE67185F3AE5004F8CA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE96615B185FABF800A69341;
+			remoteInfo = Test;
+		};
+		DE966191185FAC1100A69341 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE83EE67185F3AE5004F8CA5 /* Project object */;
 			proxyType = 1;
@@ -42,6 +94,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE1E6F43188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBUIInteractiveTransitioningContext.h; sourceTree = "<group>"; };
+		DE1E6F44188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBUIInteractiveTransitioningContext.m; sourceTree = "<group>"; };
 		DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGBUISlideController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE83EE72185F3AE5004F8CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE83EE76185F3AE5004F8CA5 /* GBUISlideController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBUISlideController-Prefix.pch"; sourceTree = "<group>"; };
@@ -53,6 +107,24 @@
 		DE83EE8A185F3AE5004F8CA5 /* GBUISlideControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GBUISlideControllerTests-Info.plist"; sourceTree = "<group>"; };
 		DE83EE8C185F3AE5004F8CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE83EE8E185F3AE5004F8CA5 /* GBUISlideControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBUISlideControllerTests.m; sourceTree = "<group>"; };
+		DE83EE98185F3C0B004F8CA5 /* GBUIPagedSliderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBUIPagedSliderControl.h; sourceTree = "<group>"; };
+		DE83EE99185F3C0B004F8CA5 /* GBUIPagedSliderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBUIPagedSliderControl.m; sourceTree = "<group>"; };
+		DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBUIControlViewController.xcodeproj; path = ../GBUIControlViewController/GBUIControlViewController.xcodeproj; sourceTree = "<group>"; };
+		DE96615C185FABF800A69341 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE96615E185FABF800A69341 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE966163185FABF800A69341 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
+		DE966165185FABF800A69341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE966167185FABF800A69341 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE966169185FABF800A69341 /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
+		DE96616A185FABF800A69341 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE96616B185FABF800A69341 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE966173185FABF800A69341 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE966174185FABF800A69341 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE966176185FABF800A69341 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE96617C185FABF800A69341 /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE966184185FABF800A69341 /* TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTests-Info.plist"; sourceTree = "<group>"; };
+		DE966186185FABF800A69341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE966188185FABF800A69341 /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE560C54185F434A00667498 /* libGBUIControlViewController.a in Frameworks */,
 				DE83EE73185F3AE5004F8CA5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,14 +148,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE966159185FABF800A69341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE966193185FAC1500A69341 /* libGBUISlideController.a in Frameworks */,
+				DE96615F185FABF800A69341 /* CoreGraphics.framework in Frameworks */,
+				DE966160185FABF800A69341 /* UIKit.framework in Frameworks */,
+				DE96615D185FABF800A69341 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE966179185FABF800A69341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE96617D185FABF800A69341 /* XCTest.framework in Frameworks */,
+				DE96617F185FABF800A69341 /* UIKit.framework in Frameworks */,
+				DE96617E185FABF800A69341 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DE83EE66185F3AE5004F8CA5 = {
 			isa = PBXGroup;
 			children = (
+				DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */,
 				DE83EE74185F3AE5004F8CA5 /* GBUISlideController */,
 				DE83EE88185F3AE5004F8CA5 /* GBUISlideControllerTests */,
+				DE966161185FABF800A69341 /* Test */,
+				DE966182185FABF800A69341 /* TestTests */,
 				DE83EE71185F3AE5004F8CA5 /* Frameworks */,
 				DE83EE70185F3AE5004F8CA5 /* Products */,
 			);
@@ -93,6 +190,8 @@
 			children = (
 				DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */,
 				DE83EE7F185F3AE5004F8CA5 /* GBUISlideControllerTests.xctest */,
+				DE96615C185FABF800A69341 /* Test.app */,
+				DE96617C185FABF800A69341 /* TestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +202,7 @@
 				DE83EE72185F3AE5004F8CA5 /* Foundation.framework */,
 				DE83EE80185F3AE5004F8CA5 /* XCTest.framework */,
 				DE83EE83185F3AE5004F8CA5 /* UIKit.framework */,
+				DE96615E185FABF800A69341 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +210,12 @@
 		DE83EE74185F3AE5004F8CA5 /* GBUISlideController */ = {
 			isa = PBXGroup;
 			children = (
+				DE83EE98185F3C0B004F8CA5 /* GBUIPagedSliderControl.h */,
+				DE83EE99185F3C0B004F8CA5 /* GBUIPagedSliderControl.m */,
 				DE83EE77185F3AE5004F8CA5 /* GBUISlideController.h */,
 				DE83EE79185F3AE5004F8CA5 /* GBUISlideController.m */,
+				DE1E6F43188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.h */,
+				DE1E6F44188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m */,
 				DE83EE75185F3AE5004F8CA5 /* Supporting Files */,
 			);
 			path = GBUISlideController;
@@ -143,6 +247,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DE83EECE185F428C004F8CA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE83EED3185F428C004F8CA5 /* libGBUIControlViewController.a */,
+				DE83EED5185F428C004F8CA5 /* GBUIControlViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE966161185FABF800A69341 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				DE96616A185FABF800A69341 /* AppDelegate.h */,
+				DE96616B185FABF800A69341 /* AppDelegate.m */,
+				DE966173185FABF800A69341 /* ViewController.h */,
+				DE966174185FABF800A69341 /* ViewController.m */,
+				DE966176185FABF800A69341 /* Images.xcassets */,
+				DE966162185FABF800A69341 /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		DE966162185FABF800A69341 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE966163185FABF800A69341 /* Test-Info.plist */,
+				DE966164185FABF800A69341 /* InfoPlist.strings */,
+				DE966167185FABF800A69341 /* main.m */,
+				DE966169185FABF800A69341 /* Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE966182185FABF800A69341 /* TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE966188185FABF800A69341 /* TestTests.m */,
+				DE966183185FABF800A69341 /* Supporting Files */,
+			);
+			path = TestTests;
+			sourceTree = "<group>";
+		};
+		DE966183185FABF800A69341 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE966184185FABF800A69341 /* TestTests-Info.plist */,
+				DE966185185FABF800A69341 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +312,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DE560C53185F434500667498 /* PBXTargetDependency */,
 			);
 			name = GBUISlideController;
 			productName = GBUISlideController;
@@ -181,6 +337,42 @@
 			productReference = DE83EE7F185F3AE5004F8CA5 /* GBUISlideControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DE96615B185FABF800A69341 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE96618F185FABF800A69341 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				DE966158185FABF800A69341 /* Sources */,
+				DE966159185FABF800A69341 /* Frameworks */,
+				DE96615A185FABF800A69341 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE966192185FAC1100A69341 /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = Test;
+			productReference = DE96615C185FABF800A69341 /* Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE96617B185FABF800A69341 /* TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE966190185FABF800A69341 /* Build configuration list for PBXNativeTarget "TestTests" */;
+			buildPhases = (
+				DE966178185FABF800A69341 /* Sources */,
+				DE966179185FABF800A69341 /* Frameworks */,
+				DE96617A185FABF800A69341 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE966181185FABF800A69341 /* PBXTargetDependency */,
+			);
+			name = TestTests;
+			productName = TestTests;
+			productReference = DE96617C185FABF800A69341 /* TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +381,14 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "George Boumis <developer.george.boumis@gmail.com>";
+				TargetAttributes = {
+					DE83EE7E185F3AE5004F8CA5 = {
+						TestTargetID = DE96615B185FABF800A69341;
+					};
+					DE96617B185FABF800A69341 = {
+						TestTargetID = DE96615B185FABF800A69341;
+					};
+				};
 			};
 			buildConfigurationList = DE83EE6A185F3AE5004F8CA5 /* Build configuration list for PBXProject "GBUISlideController" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -196,17 +396,43 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = DE83EE66185F3AE5004F8CA5;
 			productRefGroup = DE83EE70185F3AE5004F8CA5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE83EECE185F428C004F8CA5 /* Products */;
+					ProjectRef = DE83EECD185F428C004F8CA5 /* GBUIControlViewController.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DE83EE6E185F3AE5004F8CA5 /* GBUISlideController */,
 				DE83EE7E185F3AE5004F8CA5 /* GBUISlideControllerTests */,
+				DE96615B185FABF800A69341 /* Test */,
+				DE96617B185FABF800A69341 /* TestTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DE83EED3185F428C004F8CA5 /* libGBUIControlViewController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGBUIControlViewController.a;
+			remoteRef = DE83EED2185F428C004F8CA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE83EED5185F428C004F8CA5 /* GBUIControlViewControllerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GBUIControlViewControllerTests.xctest;
+			remoteRef = DE83EED4185F428C004F8CA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DE83EE7D185F3AE5004F8CA5 /* Resources */ = {
@@ -214,6 +440,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE83EE8D185F3AE5004F8CA5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE96615A185FABF800A69341 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE966177185FABF800A69341 /* Images.xcassets in Resources */,
+				DE966166185FABF800A69341 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE96617A185FABF800A69341 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE966187185FABF800A69341 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +468,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE83EE7A185F3AE5004F8CA5 /* GBUISlideController.m in Sources */,
+				DE83EE9A185F3C0B004F8CA5 /* GBUIPagedSliderControl.m in Sources */,
+				DE1E6F45188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,13 +481,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE966158185FABF800A69341 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE966175185FABF800A69341 /* ViewController.m in Sources */,
+				DE96616C185FABF800A69341 /* AppDelegate.m in Sources */,
+				DE966168185FABF800A69341 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE966178185FABF800A69341 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE966189185FABF800A69341 /* TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DE560C53185F434500667498 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GBUIControlViewController;
+			targetProxy = DE560C52185F434500667498 /* PBXContainerItemProxy */;
+		};
 		DE83EE86185F3AE5004F8CA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DE83EE6E185F3AE5004F8CA5 /* GBUISlideController */;
 			targetProxy = DE83EE85185F3AE5004F8CA5 /* PBXContainerItemProxy */;
+		};
+		DE966181185FABF800A69341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE96615B185FABF800A69341 /* Test */;
+			targetProxy = DE966180185FABF800A69341 /* PBXContainerItemProxy */;
+		};
+		DE966192185FAC1100A69341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE83EE6E185F3AE5004F8CA5 /* GBUISlideController */;
+			targetProxy = DE966191185FAC1100A69341 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -251,6 +529,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE83EE8C185F3AE5004F8CA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DE966164185FABF800A69341 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE966165185FABF800A69341 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DE966185185FABF800A69341 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE966186185FABF800A69341 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -290,6 +584,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/usr/local/include\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -322,6 +621,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/usr/local/include\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -334,6 +638,11 @@
 				DSTROOT = /tmp/GBUISlideController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBUISlideController/GBUISlideController-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/include\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -346,6 +655,11 @@
 				DSTROOT = /tmp/GBUISlideController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBUISlideController/GBUISlideController-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/include\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -356,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -369,6 +684,7 @@
 				);
 				INFOPLIST_FILE = "GBUISlideControllerTests/GBUISlideControllerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -377,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -386,6 +703,93 @@
 				GCC_PREFIX_HEADER = "GBUISlideController/GBUISlideController-Prefix.pch";
 				INFOPLIST_FILE = "GBUISlideControllerTests/GBUISlideControllerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		DE96618A185FABF800A69341 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Test/Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE96618B185FABF800A69341 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				INFOPLIST_FILE = "Test/Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DE96618C185FABF800A69341 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TestTests/TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DE96618D185FABF800A69341 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				INFOPLIST_FILE = "TestTests/TestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -409,6 +813,7 @@
 				DE83EE94185F3AE5004F8CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE83EE95185F3AE5004F8CA5 /* Build configuration list for PBXNativeTarget "GBUISlideControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +822,25 @@
 				DE83EE97185F3AE5004F8CA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE96618F185FABF800A69341 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE96618A185FABF800A69341 /* Debug */,
+				DE96618B185FABF800A69341 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE966190185FABF800A69341 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE96618C185FABF800A69341 /* Debug */,
+				DE96618D185FABF800A69341 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
