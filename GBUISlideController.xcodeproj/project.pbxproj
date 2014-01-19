@@ -96,6 +96,7 @@
 /* Begin PBXFileReference section */
 		DE1E6F43188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBUIInteractiveTransitioningContext.h; sourceTree = "<group>"; };
 		DE1E6F44188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBUIInteractiveTransitioningContext.m; sourceTree = "<group>"; };
+		DE1E6F69188C26BB001DFC03 /* GBUISlideController_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBUISlideController_Protected.h; sourceTree = "<group>"; };
 		DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGBUISlideController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE83EE72185F3AE5004F8CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE83EE76185F3AE5004F8CA5 /* GBUISlideController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBUISlideController-Prefix.pch"; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 		DE83EE74185F3AE5004F8CA5 /* GBUISlideController */ = {
 			isa = PBXGroup;
 			children = (
+				DE1E6F69188C26BB001DFC03 /* GBUISlideController_Protected.h */,
 				DE83EE98185F3C0B004F8CA5 /* GBUIPagedSliderControl.h */,
 				DE83EE99185F3C0B004F8CA5 /* GBUIPagedSliderControl.m */,
 				DE83EE77185F3AE5004F8CA5 /* GBUISlideController.h */,

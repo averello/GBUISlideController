@@ -80,6 +80,11 @@
 	[self addConstraints:_subviewConstraints];
 }
 
+//- (void)layoutSubviews {
+//	self.selectedIndex = _selectedIndex;
+//	[super layoutSubviews];
+//}
+
 - (NSArray *)constraintsFroSubviews {
 	@autoreleasepool {
 		NSMutableArray *constraints = [[NSMutableArray alloc] init];
@@ -167,7 +172,7 @@
 }
 
 - (CGSize)intrinsicContentSize {
-	return CGSizeMake(UIViewNoIntrinsicMetric, 30.0f);
+	return CGSizeMake(UIViewNoIntrinsicMetric, 29.0f);
 }
 
 - (float)totalPercent {

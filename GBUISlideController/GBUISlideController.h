@@ -22,6 +22,8 @@ typedef NS_ENUM(NSUInteger, GBUISlideControllerTransitionDirection) {
 @interface GBUISlideController : GBUIControlViewController<UIViewControllerTransitioningDelegate>
 @property (nonatomic, strong, readonly) UIView *controlView;
 @property (nonatomic, strong, readonly) UIView *contentView;
+@property (nonatomic, strong) NSNumber *topMargin;
+@property (nonatomic, strong) NSNumber *leftPagedSliderControlMargin, *rightPagedSliderControlMargin, *topPagedSliderControlMargin, *bottomPagedSliderControlMargin;
 - (void)detachControlView;
 - (void)reattachControlView;
 

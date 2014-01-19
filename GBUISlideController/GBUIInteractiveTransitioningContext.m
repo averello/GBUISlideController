@@ -11,22 +11,24 @@
 @interface GBUIInteractiveTransitioningContext ()
 @property (strong, nonatomic) UIView *containerView;
 @property (strong, nonatomic) NSLayoutConstraint *moveContraint;
+@property (strong, nonatomic) UIViewController *parentViewController;
 @end
 
 @implementation GBUIInteractiveTransitioningContext
 
 - (instancetype)init {
-	self = [self initWithFrame:CGRectZero];
+	self = [self initWithFrame:CGRectZero parentViewController:nil];
 	if (nil!=self) {
 	}
 	return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame parentViewController:(UIViewController *)controller {
 	self = [super init];
 	if (nil!=self) {
 		_containerView = [[UIView alloc] initWithFrame:frame];
 		_containerView.userInteractionEnabled = NO;
+		_parentViewController = controller;
 	}
 	return self;
 }
@@ -51,23 +53,30 @@
 	index = MAX(0, MIN(index, maxValue-1));
 	_destinationController = _viewControllers[index];
 	for (UIViewController *controller in _viewControllers) {
+		[controller willMoveToParentViewController:nil];
 		[controller.view removeFromSuperview];
 		controller.view.translatesAutoresizingMaskIntoConstraints = YES;
+		[controller removeFromParentViewController];
 	}
 	[_containerView removeFromSuperview];
 }
 
 - (void)setViewControllers:(NSArray *)viewControllers {
 	if (_viewControllers) {
-		for (UIViewController *controller in _viewControllers)
+		for (UIViewController *controller in _viewControllers) {
+			[controller willMoveToParentViewController:nil];
 			[controller.view removeFromSuperview];
+			[controller removeFromParentViewController];
+		}
 	}
 	
 	_viewControllers = viewControllers.copy;
 	
 	if (_viewControllers) {
 		for (UIViewController *controller in _viewControllers) {
+			[_parentViewController addChildViewController:controller];
 			[_containerView addSubview:controller.view];
+			[_parentViewController didMoveToParentViewController:_parentViewController];
 			controller.view.translatesAutoresizingMaskIntoConstraints = NO;
 		}
 		[_containerView addConstraints:[self constraintsForSubviews]];
@@ -80,9 +89,30 @@
 }
 
 - (void)setPercent:(float)percent {
+//	float oldPercent = _percent;
 	_percent = percent;
+//	float newPercent = _percent;
 	if (nil==_viewControllers) return;
-	_moveContraint.constant = _percent * CGRectGetWidth(_containerView.bounds) * (_viewControllers.count-1);
+	NSUInteger maxValue = _viewControllers.count;
+//	CGFloat oldConstant = _moveContraint.constant;
+	CGFloat newConstant = _percent * CGRectGetWidth(_containerView.bounds) * (maxValue-1);
+//	NSUInteger oldIndex = round(oldPercent * (CGFloat)(maxValue));
+//	oldIndex = MAX(0, MIN(oldIndex, maxValue-1));
+//	NSUInteger newIndex = round(newPercent * (CGFloat)(maxValue));
+//	newIndex = MAX(0, MIN(newIndex, maxValue-1));
+//	UIViewController *fromController = _viewControllers[oldIndex];
+//	UIViewController *toController = _viewControllers[newIndex];
+//	if (newIndex != oldIndex) {
+//		[fromController willMoveToParentViewController:nil];
+//		[_parentViewController addChildViewController:toController];
+//		[fromController removeFromParentViewController];
+//		[toController didMoveToParentViewController:_parentViewController];
+//	}
+	_moveContraint.constant = newConstant;
+//	if (newIndex != oldIndex) {
+//		[fromController removeFromParentViewController];
+//		[toController didMoveToParentViewController:_parentViewController];
+//	}
 }
 
 - (NSArray *)constraintsForSubviews {

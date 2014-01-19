@@ -24,6 +24,6 @@ typedef NS_ENUM(NSUInteger, GBUIInteractiveTransitioningDirection) {
 @property (nonatomic, readwrite) float percent;
 @property (nonatomic, readwrite, getter = isTransitionCompleted) BOOL completeTransition;
 
-- (instancetype)initWithFrame:(CGRect)frame;
+- (instancetype)initWithFrame:(CGRect)frame parentViewController:(UIViewController *)controller;
 - (void)startTransitioningInView:(UIView *)view;
 @end

@@ -10,6 +10,7 @@
 #import "GBUIPagedSliderControl.h"
 #import "GBUIInteractiveTransitioningContext.h"
 #import <objc/runtime.h>
+#import "GBUISlideController_Protected.h"
 
 @interface GBUISlideController () {
 	@protected
@@ -28,7 +29,6 @@
 	} _flags;
 }
 @property (strong, nonatomic) UIView *controlWrapperView;
-@property (strong, nonatomic) GBUIPagedSliderControl *pagedSliderControl;
 @property (strong, nonatomic) UIView *containerView;
 @property (strong, nonatomic) GBUIInteractiveTransitioningContext *interactiveTransitioningContext;
 @end
@@ -72,7 +72,11 @@
 		NSMutableArray *constraints = [[NSMutableArray alloc] init];
 		NSDictionary *bindings = NSDictionaryOfVariableBindings(_pagedSliderControl);
 		NSNumber *leftPagedSliderControlMargin, *rightPagedSliderControlMargin, *topPagedSliderControlMargin, *bottomPagedSliderControlMargin;
-		leftPagedSliderControlMargin = rightPagedSliderControlMargin = topPagedSliderControlMargin = bottomPagedSliderControlMargin = @(10.0f);
+		leftPagedSliderControlMargin = _leftPagedSliderControlMargin;
+		rightPagedSliderControlMargin = _rightPagedSliderControlMargin;
+		topPagedSliderControlMargin = _topMargin;
+		bottomPagedSliderControlMargin = _bottomPagedSliderControlMargin;
+		
 		//TODO: integrate with options
 		NSDictionary *metrics = NSDictionaryOfVariableBindings(leftPagedSliderControlMargin, rightPagedSliderControlMargin, topPagedSliderControlMargin, bottomPagedSliderControlMargin);
 		[constraints addObjectsFromArray:
@@ -87,14 +91,15 @@
 	@autoreleasepool {
 		if (_flags.isControlViewDetached) {
 			UIView *contentView = self.contentView;
-			
+			NSNumber *topmargin = _topMargin;
+			NSDictionary *metrics = NSDictionaryOfVariableBindings(topmargin);
 			NSMutableArray *constraints = [[NSMutableArray alloc] init];
 			id top = self.topLayoutGuide, bottom = self.bottomLayoutGuide;
 			NSDictionary *bindings = NSDictionaryOfVariableBindings(contentView, top, bottom);
 			[constraints addObjectsFromArray:
 			 [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[contentView]|" options:0 metrics:nil views:bindings]];
 			[constraints addObjectsFromArray:
-			 [NSLayoutConstraint constraintsWithVisualFormat:@"V:[top][contentView][bottom]" options:0 metrics:nil views:bindings]];
+			 [NSLayoutConstraint constraintsWithVisualFormat:@"V:[top]-(topmargin)-[contentView][bottom]" options:0 metrics:metrics views:bindings]];
 			return constraints;
 		}
 		else
@@ -150,7 +155,7 @@
 
 - (void)pagedSliderControlStartAction:(GBUIPagedSliderControl *)control {
 //	NSLog(@"percent:%lf selectedIndex:%lu speculativeIndex:%lu value:%lf", control.totalPercent, (unsigned long)control.selectedIndex, (unsigned long)control.speculativeIndex, control.value);
-	_interactiveTransitioningContext = [[GBUIInteractiveTransitioningContext alloc] initWithFrame:self.contentView.bounds];
+	_interactiveTransitioningContext = [[GBUIInteractiveTransitioningContext alloc] initWithFrame:self.contentView.bounds parentViewController:self];
 	_interactiveTransitioningContext.viewControllers = _viewControllers;
 	_interactiveTransitioningContext.percent = control.totalPercent;
 	_interactiveTransitioningContext.sourceViewController = _selectedViewController;
@@ -158,11 +163,15 @@
 }
 
 - (void)pagedSliderControlEndAction:(GBUIPagedSliderControl *)control {
-	_interactiveTransitioningContext.completeTransition = YES;
-		_interactiveTransitioningContext.sourceViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
-	[self.contentView addSubview:_interactiveTransitioningContext.sourceViewController.view];
-	[self.contentView addConstraints:self.selectedViewControllerConstraints];
-	_interactiveTransitioningContext = nil;
+	if (nil!=_interactiveTransitioningContext) {
+		_interactiveTransitioningContext.completeTransition = YES;
+			_interactiveTransitioningContext.sourceViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+		[self addChildViewController:_interactiveTransitioningContext.sourceViewController];
+		[self.contentView addSubview:_interactiveTransitioningContext.sourceViewController.view];
+		[self.contentView addConstraints:self.selectedViewControllerConstraints];
+		[_interactiveTransitioningContext.sourceViewController didMoveToParentViewController:self];
+		_interactiveTransitioningContext = nil;
+	}
 	self.selectedIndex = control.selectedIndex;
 }
 
@@ -327,7 +336,8 @@
 	} completion:^(BOOL finished) {
 		[sourceViewController removeFromParentViewController];
 		[destinationViewController didMoveToParentViewController:self];
-		[self.view bringSubviewToFront:self.controlView];
+		if (_flags.isControlViewDetached==0)
+			[self.view bringSubviewToFront:self.controlView];
 		_flags.animating = 0;
 	}];
 }
@@ -398,6 +408,9 @@
 	_options.verticalSegmentedControlMargin = 7.0f;
 	_options.pagedSliderControlHeight = 25.0f;
 	_options.transitionDuration = 0.45f;
+	
+	_topMargin = @(0);
+	_leftPagedSliderControlMargin = _rightPagedSliderControlMargin = _topPagedSliderControlMargin = _bottomPagedSliderControlMargin = @(10.0f);
 }
 
 - (void)viewDidLoad {
