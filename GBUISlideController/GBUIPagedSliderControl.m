@@ -7,6 +7,7 @@
 //
 
 #import "GBUIPagedSliderControl.h"
+#import "UILabel+Boldable.h"
 
 @interface GBUIPagedSliderItem ()
 @property (strong, nonatomic) UILabel *titleLabel;
@@ -56,12 +57,12 @@
 	_backgroundView.translatesAutoresizingMaskIntoConstraints =
 	_thumbView.translatesAutoresizingMaskIntoConstraints = NO;
 	
-	self.layer.borderWidth = _thumbView.layer.borderWidth = 1.0f;
+	self.layer.borderWidth = _thumbView.layer.borderWidth = 0.5f;
 	self.layer.cornerRadius = _thumbView.layer.cornerRadius = 3.0f;
-	self.layer.borderColor = [UIColor blueColor].CGColor;
 	self.clipsToBounds = YES;
 	
-	_thumbView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+	_thumbView.layer.borderColor = [UIColor colorWithRed:(0xB7/255.0f) green:(0xB7/255.0f) blue:(0xB7/255.0f) alpha:1.0f].CGColor;
+	_thumbView.layer.borderWidth = 1.0f;
 	_thumbView.backgroundColor = [UIColor colorWithWhite:0.8f alpha:0.9f];
 	_backgroundView.backgroundColor = [UIColor lightGrayColor];
 	
@@ -96,7 +97,7 @@
 		 [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backgroundView]|" options:0 metrics:nil views:bindings]];
 		
 		[constraints addObjectsFromArray:
-		 [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(1)-[_thumbView]-(1)-|" options:0 metrics:nil views:bindings]];
+		 [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_thumbView]|" options:0 metrics:nil views:bindings]];
 		_centerXcontraintOfThumbmView = [NSLayoutConstraint constraintWithItem:_thumbView attribute:(NSLayoutAttributeCenterX) relatedBy:(NSLayoutRelationEqual) toItem:self attribute:(NSLayoutAttributeCenterX) multiplier:1.0f constant:0.0f];
 		[constraints addObject:_centerXcontraintOfThumbmView];
 		
@@ -104,7 +105,7 @@
 		if (_items)
 			count = _items.count;
 		[constraints addObject:
-		 [NSLayoutConstraint constraintWithItem:_thumbView attribute:(NSLayoutAttributeWidth) relatedBy:(NSLayoutRelationEqual) toItem:self attribute:(NSLayoutAttributeWidth) multiplier:1.0f/(CGFloat)count constant:-2.0f]];
+		 [NSLayoutConstraint constraintWithItem:_thumbView attribute:(NSLayoutAttributeWidth) relatedBy:(NSLayoutRelationEqual) toItem:self attribute:(NSLayoutAttributeWidth) multiplier:1.0f/(CGFloat)count constant:-1.0f]];
 		
 		if (_backgroundDecorationView) {
 			NSDictionary *bindings = NSDictionaryOfVariableBindings(_backgroundDecorationView);
@@ -256,8 +257,13 @@
 }
 
 -(void)setSelectedIndex:(NSUInteger)selectedIndex {
+	NSUInteger oldSelectedIndex = _selectedIndex;
 	_selectedIndex = selectedIndex;
+	GBUIPagedSliderItem *oldItem = _items[oldSelectedIndex];
+	oldItem.titleLabel.bold = NO;
+	
 	GBUIPagedSliderItem *item = _items[_selectedIndex];
+	item.titleLabel.bold = YES;
 	CGFloat titleLabelCenterX = item.titleLabel.center.x;
 	CGFloat centerX = CGRectGetMidX(self.bounds);
 	_centerXcontraintOfThumbmView.constant = titleLabelCenterX - centerX;

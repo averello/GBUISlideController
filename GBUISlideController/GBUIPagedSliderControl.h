@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UILabel+Boldable.h"
 
 @interface GBUIPagedSliderItem : NSObject
 @property (strong, nonatomic, readonly) UILabel *titleLabel;

@@ -33,6 +33,7 @@
 		DE966187185FABF800A69341 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE966185185FABF800A69341 /* InfoPlist.strings */; };
 		DE966189185FABF800A69341 /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966188185FABF800A69341 /* TestTests.m */; };
 		DE966193185FAC1500A69341 /* libGBUISlideController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE6F185F3AE5004F8CA5 /* libGBUISlideController.a */; };
+		DEBF32EC189538BA00381F51 /* UILabel+Boldable.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBF32EB189538BA00381F51 /* UILabel+Boldable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		DE966184185FABF800A69341 /* TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTests-Info.plist"; sourceTree = "<group>"; };
 		DE966186185FABF800A69341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE966188185FABF800A69341 /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		DEBF32EA189538BA00381F51 /* UILabel+Boldable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Boldable.h"; sourceTree = "<group>"; };
+		DEBF32EB189538BA00381F51 /* UILabel+Boldable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Boldable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 				DE1E6F43188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.h */,
 				DE1E6F44188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m */,
 				DE83EE75185F3AE5004F8CA5 /* Supporting Files */,
+				DEBF32EA189538BA00381F51 /* UILabel+Boldable.h */,
+				DEBF32EB189538BA00381F51 /* UILabel+Boldable.m */,
 			);
 			path = GBUISlideController;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				DE83EE7A185F3AE5004F8CA5 /* GBUISlideController.m in Sources */,
 				DE83EE9A185F3C0B004F8CA5 /* GBUIPagedSliderControl.m in Sources */,
 				DE1E6F45188BDFEC001DFC03 /* GBUIInteractiveTransitioningContext.m in Sources */,
+				DEBF32EC189538BA00381F51 /* UILabel+Boldable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
