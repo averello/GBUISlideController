@@ -26,7 +26,6 @@
 		DE966168185FABF800A69341 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966167185FABF800A69341 /* main.m */; };
 		DE96616C185FABF800A69341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE96616B185FABF800A69341 /* AppDelegate.m */; };
 		DE966175185FABF800A69341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE966174185FABF800A69341 /* ViewController.m */; };
-		DE966177185FABF800A69341 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE966176185FABF800A69341 /* Images.xcassets */; };
 		DE96617D185FABF800A69341 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE80185F3AE5004F8CA5 /* XCTest.framework */; };
 		DE96617E185FABF800A69341 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE72185F3AE5004F8CA5 /* Foundation.framework */; };
 		DE96617F185FABF800A69341 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE83EE83185F3AE5004F8CA5 /* UIKit.framework */; };
@@ -122,7 +121,6 @@
 		DE96616B185FABF800A69341 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE966173185FABF800A69341 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DE966174185FABF800A69341 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DE966176185FABF800A69341 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE96617C185FABF800A69341 /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE966184185FABF800A69341 /* TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestTests-Info.plist"; sourceTree = "<group>"; };
 		DE966186185FABF800A69341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 				DE96616B185FABF800A69341 /* AppDelegate.m */,
 				DE966173185FABF800A69341 /* ViewController.h */,
 				DE966174185FABF800A69341 /* ViewController.m */,
-				DE966176185FABF800A69341 /* Images.xcassets */,
 				DE966162185FABF800A69341 /* Supporting Files */,
 			);
 			path = Test;
@@ -386,7 +383,7 @@
 		DE83EE67185F3AE5004F8CA5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "George Boumis <developer.george.boumis@gmail.com>";
 				TargetAttributes = {
 					DE83EE7E185F3AE5004F8CA5 = {
@@ -454,7 +451,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE966177185FABF800A69341 /* Images.xcassets in Resources */,
 				DE966166185FABF800A69341 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,7 +560,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -607,7 +602,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -677,7 +671,6 @@
 		DE83EE96185F3AE5004F8CA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -700,7 +693,6 @@
 		DE83EE97185F3AE5004F8CA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -719,9 +711,6 @@
 		DE96618A185FABF800A69341 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,6 +724,7 @@
 				);
 				INFOPLIST_FILE = "Test/Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -743,9 +733,6 @@
 		DE96618B185FABF800A69341 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -755,6 +742,7 @@
 				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
 				INFOPLIST_FILE = "Test/Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -763,7 +751,6 @@
 		DE96618C185FABF800A69341 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -786,7 +773,6 @@
 		DE96618D185FABF800A69341 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

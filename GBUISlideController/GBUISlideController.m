@@ -310,11 +310,11 @@
 	_flags.animating = 1;
 	
 	/* Find the direction of the transition */
-	GBUISlideControllerTransitionDirection direction;
-	if (_selectedIndex<selectedIndex)
-		direction = GBUISlideControllerTransitionDirectionRight;
-	else
-		direction = GBUISlideControllerTransitionDirectionLeft;
+//	GBUISlideControllerTransitionDirection direction;
+//	if (_selectedIndex<selectedIndex)
+//		direction = GBUISlideControllerTransitionDirectionRight;
+//	else
+//		direction = GBUISlideControllerTransitionDirectionLeft;
 	
 //	_willSelectViewControllerDelagateBlock(destinationViewController);
 	
